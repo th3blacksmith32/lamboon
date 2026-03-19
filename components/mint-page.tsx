@@ -11,8 +11,6 @@ import {
   Transaction
 } from "@solana/web3.js";
 import {
-  ExternalLink,
-  Flame,
   Send,
   ShieldCheck,
   Twitter
@@ -21,6 +19,7 @@ import logo from "@/logo.png";
 import {
   INITIAL_TOTAL_MINTS,
   PROJECT_NAME,
+  PROJECT_TELEGRAM_URL,
   PROJECT_X_URL,
   SUPPLY_CAP
 } from "@/lib/mint-config";
@@ -122,14 +121,14 @@ export function MintPage() {
     <div className="min-h-screen select-none bg-black px-4 pb-10 text-white selection:bg-[#9945FF] md:p-10">
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_bottom_right,#1d0b30_0%,#000000_100%)] opacity-70" />
 
-      <nav className="relative z-10 mx-auto flex w-full max-w-6xl items-center justify-between py-6">
+      <nav className="sticky top-0 relative z-30 mx-auto flex w-full max-w-6xl items-center justify-between py-6">
         <div className="flex items-center gap-3">
           <Image src={logo} alt="Lamboon Logo" className="h-10 w-10 object-contain" priority />
           <span className="text-2xl font-black uppercase tracking-tighter text-[#14F195] italic">
             {PROJECT_NAME}
           </span>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-black/60 px-3 py-2 backdrop-blur">
           <a
             href={PROJECT_X_URL}
             target="_blank"
@@ -139,7 +138,9 @@ export function MintPage() {
             <Twitter size={20} />
           </a>
           <a
-            href="#"
+            href={PROJECT_TELEGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-full bg-white/5 p-2 transition-colors hover:bg-white/10"
           >
             <Send size={20} />
@@ -274,7 +275,9 @@ export function MintPage() {
               <Twitter size={16} /> Follow Twitter
             </a>
             <a
-              href="#"
+              href={PROJECT_TELEGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
               className="flex flex-1 items-center justify-center gap-2 rounded-2xl bg-[#14F195]/10 py-3 text-xs font-black uppercase text-[#14F195] transition-all hover:bg-[#14F195]/20"
             >
               <Send size={16} /> Join Telegram
@@ -284,7 +287,7 @@ export function MintPage() {
       </div>
 
       <footer className="relative z-10 mt-32 pb-10 text-[10px] font-bold uppercase tracking-[0.5em] text-gray-700">
-        Solana Mainnet • $LAMBOON 2026 • Verified Fair Launch
+        Solana Mainnet | $LAMBOON 2026 | Verified Fair Launch
       </footer>
     </div>
   );

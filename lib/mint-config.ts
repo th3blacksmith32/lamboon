@@ -7,7 +7,8 @@ export const MAX_MINTS_PER_WALLET = 10;
 export const SUPPLY_CAP = 40_000;
 export const INITIAL_TOTAL_MINTS = 0;
 export const TOTAL_SUPPLY_LABEL = "1,000,000,000";
-export const PROJECT_X_URL = "https://x.com/yourhandle";
+export const PROJECT_X_URL = "https://x.com/lamboononsol";
+export const PROJECT_TELEGRAM_URL = "https://t.me/lamboononsol";
 
 function parsePublicKey(value: string | undefined) {
   if (!value?.trim()) {
