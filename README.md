@@ -19,10 +19,7 @@ copy .env.example .env.local
 3. Fill in:
 
 - `NEXT_PUBLIC_TREASURY_ADDRESS` or `NEXT_PUBLIC_TREASURY_WALLET`
-- `NEXT_PUBLIC_FEE_ADDRESS` or `NEXT_PUBLIC_FEE_WALLET`
 - `NEXT_PUBLIC_SOLANA_RPC_URL` or `NEXT_PUBLIC_RPC_URL`
-- `TOKEN_MINT_ADDRESS`
-- `PRIVATE_KEY`
 
 4. Run locally:
 
@@ -41,7 +38,7 @@ npm run bot
 1. Frontend (Vercel):
 - Push the code to GitHub.
 - Import the repo into Vercel.
-- Add `NEXT_PUBLIC_TREASURY_ADDRESS` and `NEXT_PUBLIC_FEE_ADDRESS` in the Vercel environment settings.
+- Add `NEXT_PUBLIC_TREASURY_ADDRESS` in the Vercel environment settings.
 
 2. Backend (Railway):
 - Deploy [scripts/bot.js](C:\Users\crypt\Downloads\minttoken\scripts\bot.js) on Railway.
@@ -52,5 +49,5 @@ npm run bot
 
 - The wallet mint cap is stored per wallet in browser local storage. This is not a secure anti-bot or anti-sybil control.
 - Token delivery is not automatic in this frontend. Run a backend worker that watches confirmed payments and distributes tokens.
-- Liquidity routing is still an operational step you handle separately.
+- The frontend exposes only the treasury payment address. There is no platform fee address in the public app.
 - [scripts/bot.js](C:\Users\crypt\Downloads\minttoken\scripts\bot.js) is only a scaffold. It can send SPL tokens, but it does not yet monitor treasury payments or persist state.
