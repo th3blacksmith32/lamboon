@@ -18,6 +18,7 @@ import {
 import logo from "@/logo.png";
 import {
   INITIAL_TOTAL_MINTS,
+  MINT_SUPPLY_LABEL,
   PROJECT_NAME,
   PROJECT_TELEGRAM_URL,
   PROJECT_X_URL,
@@ -196,9 +197,9 @@ export function MintPage() {
             </div>
             <div className="rounded-3xl border border-white/5 bg-white/5 p-5 text-right">
               <span className="mb-1 block text-[10px] font-bold uppercase text-gray-500">
-                Max Supply
+                Mint Supply
               </span>
-              <span className="text-xl font-black italic text-[#9945FF]">1 BILLION</span>
+              <span className="text-xl font-black italic text-[#9945FF]">{MINT_SUPPLY_LABEL}</span>
             </div>
           </div>
 
